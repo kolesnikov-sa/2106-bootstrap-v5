@@ -1,52 +1,647 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learning Bootstrap v5 with SASS</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <!-- START THE NAVBAR SECTION -->
-  <nav class="navbar navbar-expand-lg navbar-light menu">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="images/logo.png" alt="Logo Image">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Testimonials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacts</a>
-          </li>
-        </ul>
-        <button type="button" class="rounded-pill btn-rounded">+1 728365413
-          <span>
-            <i class="fas fa-phone-alt"></i>
-          </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Bootstrap v5 with SASS</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- START THE NAVBAR SECTION -->
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="Logo Image" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacts</a>
+            </li>
+          </ul>
+          <button type="button" class="rounded-pill btn-rounded">
+            +1 728365413
+            <span>
+              <i class="fas fa-phone-alt"></i>
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <script src="assets/js/bootstrap.bundle.js"></script>
-</body>
+    <!-- START THE INTRO SECTION -->
+    <section id="home" class="intro-section">
+      <div class="container">
+        <div class="row align-items-center text-white">
+          <!-- START THE CONTENT FOR THE INTRO -->
+          <div class="col-md-6 intros">
+            <h1 class="display-2">
+              <span class="display-2--intro">Hey, we're OKADIA!</span>
+              <span class="display-2--description lh-base"
+                >This is a demo multi-purpose responsive layout created with
+                Bootstrap 5 and SASS</span
+              >
+            </h1>
+            <button type="button" class="rounded-pill btn-rounded">
+              Get in touch
+              <span>
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </button>
+          </div>
+          <!-- START THE CONTENT FOR THE VIDEO -->
+          <div class="col-md-6 intros text-end">
+            <div class="video-box">
+              <img
+                src="images/arts/intro-section-illustration.png"
+                alt="Video Illustration"
+                class="img-fluid"
+              />
+              <a
+                href="#"
+                class="
+                  glightbox
+                  position-absolute
+                  top-50
+                  start-50
+                  translate-middle
+                "
+              >
+                <span>
+                  <i class="fas fa-play-circle"></i>
+                </span>
+                <span
+                  class="border-animation border-animation--border-1"
+                ></span>
+                <span
+                  class="border-animation border-animation--border-2"
+                ></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L34.3,112C68.6,96,137,64,206,90.7C274.3,117,343,203,411,208C480,213,549,139,617,96C685.7,53,754,43,823,69.3C891.4,96,960,160,1029,170.7C1097.1,181,1166,139,1234,128C1302.9,117,1371,139,1406,149.3L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- START THE COMPANIES SECTION -->
+    <section id="companies" class="companies">
+      <div class="container">
+        <div class="row text-center">
+          <h4 class="fw-bold lead mb-3">Trusted by companies like</h4>
+          <div class="heading-line mb-5"></div>
+        </div>
+      </div>
+      <!-- START THE COMPANIES CONTENT -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-lg-2">
+            <div class="companies__logo-box shadow-sm">
+              <img
+                src="images/companies/logo-company-1.png"
+                alt="Company 1 Logo"
+                title="Company 1"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="companies__logo-box shadow-sm">
+              <img
+                src="images/companies/logo-company-2.png"
+                alt="Company 2 Logo"
+                title="Company 2"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="companies__logo-box shadow-sm">
+              <img
+                src="images/companies/logo-company-3.png"
+                alt="Company 3 Logo"
+                title="Company 3"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="companies__logo-box shadow-sm">
+              <img
+                src="images/companies/logo-company-4.png"
+                alt="Company 4 Logo"
+                title="Company 4"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="companies__logo-box shadow-sm">
+              <img
+                src="images/companies/logo-company-5.png"
+                alt="Company 5 Logo"
+                title="Company 5"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="companies__logo-box shadow-sm">
+              <img
+                src="images/companies/logo-company-6.png"
+                alt="Company 6 Logo"
+                title="Company 6"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- START SECTION 4 — THE SERVICES -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="row text-center">
+          <h2 class="display-3 fw-bold">Our Services</h2>
+          <div class="heading-line mb-1"></div>
+        </div>
+
+        <!-- START THE DESCRIPTION CONTENT -->
+        <div class="row pt-2 pb-2 mt-0 mb-3">
+          <div class="col-md-6 border-right">
+            <div class="bg-white p-3">
+              <h2 class="fw-bold text-capitalize text-center">
+                Our services range from initial design to deployment anywhere
+                anytime
+              </h2>
+            </div>
+          </div>
+          <div class="col md-6">
+            <div class="bg-white p-4 text-start">
+              <p class="fw-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt, provident unde. Dolore deserunt odio in veritatis
+                placeat. Pariatur, dicta a minima dolore sit obcaecati eos
+                voluptas molestiae voluptatem ullam non?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- START THE CONTENT FOR THE SERVICES -->
+      <div class="container">
+        <!-- START THE MARKETING CONTENT -->
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+            <div class="services__content">
+              <div class="icon d-block fas fa-paper-plane"></div>
+              <div class="h3 display-3--title mt-1">Marketing</div>
+              <p class="lh-lg">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+                iure laboriosam nam facilis expedita, ipsam reprehenderit sint.
+                Possimus fuga numquam repellendus iste doloremque eos sequi?
+                Quae, dicta recusandae.
+              </p>
+              <button
+                type="button"
+                class="rounded-pill btn-rounded border-primary"
+              >
+                Learn more
+                <span>
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end"
+          >
+            <div class="services__pic">
+              <img
+                src="images/services/marketing.png"
+                alt="Marketing"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- START THE WEB DEVELOPMENT CONTENT -->
+        <div class="row">
+          <div
+            class="
+              col-lg-6 col-md-6 col-sm-12 col-xs-12
+              services
+              mt-4
+              text-start
+            "
+          >
+            <div class="services__pic">
+              <img
+                src="images/services/development.png"
+                alt="Web Development"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+            <div class="services__content">
+              <div class="icon d-block fas fa-code"></div>
+              <div class="h3 display-3--title mt-1">Web Development</div>
+              <p class="lh-lg">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+                iure laboriosam nam facilis expedita, ipsam reprehenderit sint.
+                Possimus fuga numquam repellendus iste doloremque eos sequi?
+                Quae, dicta recusandae.
+              </p>
+              <button
+                type="button"
+                class="rounded-pill btn-rounded border-primary"
+              >
+                Learn more
+                <span>
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- START THE CLOUD HOSTING CONTENT -->
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
+            <div class="services__content">
+              <div class="icon d-block fas fa-cloud-upload-alt"></div>
+              <div class="h3 display-3--title mt-1">Cloud Hosting</div>
+              <p class="lh-lg">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+                iure laboriosam nam facilis expedita, ipsam reprehenderit sint.
+                Possimus fuga numquam repellendus iste doloremque eos sequi?
+                Quae, dicta recusandae.
+              </p>
+              <button
+                type="button"
+                class="rounded-pill btn-rounded border-primary"
+              >
+                Learn more
+                <span>
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end"
+          >
+            <div class="services__pic">
+              <img
+                src="images/services/hosting.png"
+                alt="Cloud Hosting"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- START SECTION 5 — THE TESTIMONIALS -->
+    <section id="testimonials" class="testimonials">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,224L40,213.3C80,203,160,181,240,160C320,139,400,117,480,117.3C560,117,640,139,720,165.3C800,192,880,224,960,202.7C1040,181,1120,107,1200,90.7C1280,75,1360,117,1400,138.7L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+        ></path>
+      </svg>
+      <div class="container">
+        <div class="row text-center text-white">
+          <h2 class="display-3 fw-bold">Testimonials</h2>
+          <hr style="width: 100px; height: 3px" class="mx-auto" />
+          <p class="lead pt-1">What our clients are saying</p>
+
+          <!-- START THE CAROUSEL CONTENT -->
+          <div class="row align-items-center">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+
+                <!-- CAROUSEL ITEM 1 -->
+                <div class="carousel-item active">
+                  <!-- TESTIMONIAL CARD -->
+                  <div class="testimonials__card">
+                    <p class="lh-lg">
+                      <i class="fas fa-quote-left"></i>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Temporibus ex quam odio facere maxime neque quos
+                      explicabo. Architecto hic qui eum!
+                      <i class="fas fa-quote-right"></i>
+                      <div class="ratings p-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </p>
+                  </div>
+
+                  <!-- CLIENT PICTURE -->
+                  <div class="testimonials__picture">
+                    <img src="images/testimonials/client-1.jpeg" alt="Client 1" class="rounded-circle img-fluid">
+                  </div>
+
+                  <!-- CLIENT NAME & ROLE -->
+                  <div class="testimonials__name">
+                    <h3>ClaireBelle Zawadi</h3>
+                    <p class="fw-light">CEO & Founder</p>
+                  </div>
+                </div>
+
+                <!-- CAROUSEL ITEM 2 -->
+                <div class="carousel-item">
+                  <!-- TESTIMONIAL CARD -->
+                  <div class="testimonials__card">
+                    <p class="lh-lg">
+                      <i class="fas fa-quote-left"></i>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Temporibus ex quam odio facere maxime neque quos
+                      explicabo. Architecto hic qui eum!
+                      <i class="fas fa-quote-right"></i>
+                      <div class="ratings p-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </p>
+                  </div>
+
+                  <!-- CLIENT PICTURE -->
+                  <div class="testimonials__picture">
+                    <img src="images/testimonials/client-2.jpeg" alt="Client 2" class="rounded-circle img-fluid">
+                  </div>
+
+                  <!-- CLIENT NAME & ROLE -->
+                  <div class="testimonials__name">
+                    <h3>Mark Johnson</h3>
+                    <p class="fw-light">Independent Consultant</p>
+                  </div>
+                </div>
+
+                <!-- CAROUSEL ITEM 3 -->
+                <div class="carousel-item">
+                  <!-- TESTIMONIAL CARD -->
+                  <div class="testimonials__card">
+                    <p class="lh-lg">
+                      <i class="fas fa-quote-left"></i>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Temporibus ex quam odio facere maxime neque quos
+                      explicabo. Architecto hic qui eum!
+                      <i class="fas fa-quote-right"></i>
+                      <div class="ratings p-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </p>
+                  </div>
+
+                  <!-- CLIENT PICTURE -->
+                  <div class="testimonials__picture">
+                    <img src="images/testimonials/client-3.jpeg" alt="Client 3" class="rounded-circle img-fluid">
+                  </div>
+
+                  <!-- CLIENT NAME & ROLE -->
+                  <div class="testimonials__name">
+                    <h3>Linda Smith</h3>
+                    <p class="fw-light">Finance Director</p>
+                  </div>
+                </div>
+
+                <!-- CAROUSEL ITEM 4 -->
+                <div class="carousel-item">
+                  <!-- TESTIMONIAL CARD -->
+                  <div class="testimonials__card">
+                    <p class="lh-lg">
+                      <i class="fas fa-quote-left"></i>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Temporibus ex quam odio facere maxime neque quos
+                      explicabo. Architecto hic qui eum!
+                      <i class="fas fa-quote-right"></i>
+                      <div class="ratings p-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </p>
+                  </div>
+
+                  <!-- CLIENT PICTURE -->
+                  <div class="testimonials__picture">
+                    <img src="images/testimonials/client-4.jpeg" alt="Client 4" class="rounded-circle img-fluid">
+                  </div>
+
+                  <!-- CLIENT NAME & ROLE -->
+                  <div class="testimonials__name">
+                    <h3>Martin Ivanoff</h3>
+                    <p class="fw-light">Investor</p>
+                  </div>
+                </div>
+
+                <!-- CAROUSEL ITEM 5 -->
+                <div class="carousel-item">
+                  <!-- TESTIMONIAL CARD -->
+                  <div class="testimonials__card">
+                    <p class="lh-lg">
+                      <i class="fas fa-quote-left"></i>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Temporibus ex quam odio facere maxime neque quos
+                      explicabo. Architecto hic qui eum!
+                      <i class="fas fa-quote-right"></i>
+                      <div class="ratings p-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </p>
+                  </div>
+
+                  <!-- CLIENT PICTURE -->
+                  <div class="testimonials__picture">
+                    <img src="images/testimonials/client-5.jpeg" alt="Client 5" class="rounded-circle img-fluid">
+                  </div>
+
+                  <!-- CLIENT NAME & ROLE -->
+                  <div class="testimonials__name">
+                    <h3>Marieke White</h3>
+                    <p class="fw-light">Publisher</p>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button
+                class="btn btn-outline-light fas fa-long-arrow-alt-left"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+              </button>
+              <button
+                class="btn btn-outline-light fas fa-long-arrow-alt-right"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+              </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,224L40,213.3C80,203,160,181,240,160C320,139,400,117,480,117.3C560,117,640,139,720,165.3C800,192,880,224,960,202.7C1040,181,1120,107,1200,90.7C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>      
+    </section>
+
+    <!-- SECTION 6 — THE FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="row text-center">
+          <h2 class="display-3 fw-bold text-uppercase">FAQ</h2>
+          <div class="heading-line"></div>
+          <p class="lead">Frequenty Asked Questions</p>
+        </div>
+
+        <!-- ACCORDION CONTENT -->
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="accordion" id="accordionExample">
+
+              <!-- ACCORDION ITEM 1 -->
+              <div class="accordion-item shadow mb-3">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What are the main features?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque doloribus nobis magnam cumque asperiores tempore repellat, deserunt dolor dignissimos. Libero dicta quam similique porro, aliquid nulla eum corrupti laboriosam ea quo ad perferendis quaerat quasi suscipit tenetur. Ut hic earum odio quae excepturi omnis tempora magni nulla, saepe repellat accusantium.
+                  </div>
+                </div>
+              </div>
+
+              <!-- ACCORDION ITEM 2 -->
+              <div class="accordion-item shadow mb-3">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How long is the trial period?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In saepe voluptatem perferendis soluta blanditiis autem impedit, minima nam laborum illo illum adipisci, eveniet aliquid et doloremque, atque accusamus! Accusantium cupiditate enim, sed ad facere, maxime nostrum, dolorum facilis ipsum asperiores explicabo iusto recusandae ipsa officiis ut nihil libero soluta unde perspiciatis temporibus harum neque minima dolores alias? Quasi, magni quae?
+                  </div>
+                </div>
+              </div>
+
+              <!-- ACCORDION ITEM 3 -->
+              <div class="accordion-item shadow mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How can I get started after the trial is over?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsum repellendus tempora, corporis alias temporibus commodi quis illo ducimus necessitatibus tenetur soluta eaque. Eveniet repudiandae optio delectus sed sequi! Veniam.
+                  </div>
+                </div>
+              </div>
+
+              <!-- ACCORDION ITEM 4 -->
+              <div class="accordion-item shadow mb-3">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Can I get a refund if I am not satisfied?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, esse natus suscipit ipsam repellat voluptatibus est! Autem qui sunt ab molestias, delectus nemo mollitia. Doloribus vero nobis deserunt in, dicta deleniti fugiat necessitatibus, consequatur exercitationem ea ab! Ab, officia est?
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/assets/vendors/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+      const lightbox = GLightbox({
+        href: "https://www.youtube.com/watch?v=Ga6RYejo6Hk",
+        type: "video",
+        source: "youtube", //vimeo, youtube or local
+        width: 900,
+        autoplayVideos: true,
+      });
+    </script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+  </body>
 </html>
